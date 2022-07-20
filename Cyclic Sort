@@ -1,0 +1,18 @@
+public void cyclicSort(int[] nums){
+        int i = 0;
+        while (i<nums.length){
+            int corr_index = nums[i]-1;
+            if (nums[i] != nums[corr_index]){
+                swap(nums,i,corr_index);
+            }
+            else{
+                i++;
+            }
+        }
+    }
+    
+    public void swap(int[] nums,int first,int second){
+        int temp = nums[first];
+        nums[first] = nums[second];
+        nums[second] = temp;
+    }
