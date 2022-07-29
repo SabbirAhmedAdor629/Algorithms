@@ -1,0 +1,24 @@
+public void selectionSort(int[] arr){
+        for (int i = 0; i < arr.length - 1; i++) {
+            last_index = nums.length-i-1;
+            max_index = max(nums, last_index);
+            swap(nums, max_index, last_index);
+        }
+    }
+    
+    
+    public void swapArray(int[] arr,int first,int second){
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
+    }
+    
+    
+     public void max(int[] arr, int last_index){
+        int max = arr[0];
+        for (int i=1; i<last_index; i++){
+            if (arr[i] < max){
+                max = arr[i];
+            }
+        }
+      }
