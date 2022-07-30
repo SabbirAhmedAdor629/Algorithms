@@ -1,3 +1,5 @@
+// THIS SORTING APPROACH WORKS WELL IF THE ARRAY INDEX IS GIVEN 1 TO N OR 0 TO N
+
 public void cyclicSort(int[] nums){
         int i = 0;
         while (i<nums.length){
