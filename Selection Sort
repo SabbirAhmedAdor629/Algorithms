@@ -1,5 +1,114 @@
 // Select an element and put it in its correct position
 
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+    int[] arr = {2,0,2,1,1,0};
+    sortColors(arr);
+    
+    //System.out.println(Arrays.toString(arr));
+    
+    System.out.println(arr[0]);
+    System.out.println(arr[1]);
+    System.out.println(arr[2]);
+    System.out.println(arr[3]);
+    System.out.println(arr[4]);
+    System.out.println(arr[5]);
+  }
+
+
+    static void sortColors(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            int last_index = nums.length-i-1;
+            
+            int max_index = getMaxIndex(nums, 0, last_index);
+            
+            swap(nums, max_index, last_index);
+        }
+    }
+    
+    
+    static void swap(int[] arr, int first, int second){
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
+    }
+  
+    
+     static int getMaxIndex(int[] arr, int start, int end){
+        int max = start;
+        for (int i=start; i<=end; i++){
+            if (arr[max] < arr[i]){
+                max = i;
+            }
+        }
+        return max;
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FAULTY ONE
+
 class Solution {
     public void sortColors(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
@@ -77,9 +186,7 @@ class Solution {
 
 
 
-
-
-
+// FAULTY TWO
 
 public void selectionSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
