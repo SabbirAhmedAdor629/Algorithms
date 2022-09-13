@@ -1,4 +1,4 @@
-// Select an element and put it in its correct position
+// Selection sort : Select an element and put it in its correct position.
 
 
 class Main {
@@ -17,7 +17,7 @@ class Main {
     System.out.println(arr[5]);
   }
 
-
+    // Selection sort Algorithm
     static void sortColors(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             int last_index = nums.length-i-1;
@@ -28,14 +28,14 @@ class Main {
         }
     }
     
-    
+    // Swap function
     static void swap(int[] arr, int first, int second){
         int temp = arr[first];
         arr[first] = arr[second];
         arr[second] = temp;
     }
   
-    
+    // Function for finding maximum element
      static int getMaxIndex(int[] arr, int start, int end){
         int max = start;
         for (int i=start; i<=end; i++){
@@ -46,169 +46,3 @@ class Main {
         return max;
      }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// FAULTY ONE
-
-class Solution {
-    public void sortColors(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            int last_index = nums.length-i-1;
-            
-            int max_index = getMaxIndex(nums, 0, last_index);
-            
-            swap(nums, max_index, last_index);
-        }
-        System.out.println(nums);
-    }
-    
-    
-    static void swap(int[] arr, int first, int second){
-        int temp = arr[first];
-        arr[first] = arr[second];
-        arr[second] = temp;
-    }
-    
-     
-    
-    
-     static int getMaxIndex(int[] nums, int start, int end){
-        int max = start;
-        for (int i=start+1; i<end; i++){
-            if (nums[i] > nums[max]){
-                max = i;
-            }
-        }
-        return max;
-     }
-    
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// FAULTY TWO
-
-public void selectionSort(int[] arr){
-        for (int i = 0; i < arr.length - 1; i++) {
-            last_index = nums.length-i-1;
-            max_index = max(nums, last_index);
-            swap(nums, max_index, last_index);
-        }
-    }
-    
-    
-    public void swapArray(int[] arr,int first,int second){
-        int temp = arr[first];
-        arr[first] = arr[second];
-        arr[second] = temp;
-    }
-    
-    
-     public void max(int[] arr, int last_index){
-        int max = arr[0];
-        for (int i=1; i<last_index; i++){
-            if (arr[i] < max){
-                max = arr[i];
-            }
-        }
-      }
