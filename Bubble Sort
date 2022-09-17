@@ -1,3 +1,6 @@
+// In every step we check adjacent elements         
+        
+        
         int i = 0;
         int j = 0;
         int temp = 0;
