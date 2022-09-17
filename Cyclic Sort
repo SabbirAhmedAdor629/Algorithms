@@ -1,4 +1,6 @@
 // THIS SORTING APPROACH WORKS WELL IF THE ARRAY INDEX IS GIVEN 1 TO N OR 0 TO N
+// Time Complexity O(n)
+// algo :- In every step, We check if the number is in its correct index, If not then put it in its correct index by swapping
 
 public void cyclicSort(int[] nums){
         int i = 0;
