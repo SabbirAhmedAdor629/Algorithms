@@ -1,4 +1,5 @@
-// In every step we check adjacent elements         
+// In every step we check adjacent elements     
+// Time complexity O(n*2)
         
         
         int i = 0;
